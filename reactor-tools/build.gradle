@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'net.bytebuddy.byte-buddy-gradle-plugin' version '1.10.9' apply false
+    id 'net.bytebuddy.byte-buddy-gradle-plugin' version '1.10.14' apply false
 }
 
 apply plugin: 'com.github.johnrengelman.shadow'
@@ -40,8 +40,8 @@ dependencies {
     compileOnly "com.google.code.findbugs:jsr305:${findbugsVersion}"
     compileOnly "com.google.code.findbugs:annotations:${findbugsVersion}"
 
-    shaded 'net.bytebuddy:byte-buddy-agent:1.10.9'
-    shaded 'net.bytebuddy:byte-buddy:1.10.9'
+    shaded 'net.bytebuddy:byte-buddy-agent:1.10.14'
+    shaded 'net.bytebuddy:byte-buddy:1.10.14'
     for (dependency in project.configurations.shaded.dependencies) {
         compileOnly(dependency)
         testRuntimeOnly(dependency)
