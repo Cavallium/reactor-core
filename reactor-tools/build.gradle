@@ -15,7 +15,7 @@
  */
 
 plugins {
-    id 'net.bytebuddy.byte-buddy-gradle-plugin' version '1.10.9' apply false
+    id 'net.bytebuddy.byte-buddy-gradle-plugin' version '1.10.14' apply false
 }
 
 apply plugin: 'com.github.johnrengelman.shadow'
@@ -37,8 +37,8 @@ configurations {
 dependencies {
     api project(":reactor-core")
 
-    shaded 'net.bytebuddy:byte-buddy-agent:1.10.9'
-    shaded 'net.bytebuddy:byte-buddy:1.10.9'
+    shaded 'net.bytebuddy:byte-buddy-agent:1.10.14'
+    shaded 'net.bytebuddy:byte-buddy:1.10.14'
     for (dependency in project.configurations.shaded.dependencies) {
         compileOnly(dependency)
         testRuntime(dependency)
